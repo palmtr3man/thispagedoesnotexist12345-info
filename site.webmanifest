@@ -1,0 +1,16 @@
+{
+  "name": "Career Resource Library — The Ultimate Journey",
+  "short_name": "TUJ Resources",
+  "description": "Career resource library for The Ultimate Journey",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#3498db",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,99 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Career Resources Library</title>
-      <style>
-                * { margin: 0; padding: 0; box-sizing: border-box; }
-                body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #2c3e50; min-height: 100vh; padding: 20px; }
-                .container { max-width: 1200px; margin: 0 auto; }
-                .header { background: white; padding: 60px 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px; text-align: center; }
-                .header h1 { font-size: 3em; color: #2c3e50; margin-bottom: 15px; }
-                .tagline { font-size: 1.3em; color: #7f8c8d; margin-bottom: 30px; }
-                .badge { display: inline-block; background: #3498db; color: white; padding: 8px 20px; border-radius: 20px; margin: 5px; }
-                .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px; }
-                .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s; border-top: 4px solid #3498db; }
-                .card:hover { transform: translateY(-5px); }
-                .icon { font-size: 3em; margin-bottom: 20px; }
-                .card h2 { color: #2c3e50; margin-bottom: 15px; }
-                .card p { color: #7f8c8d; line-height: 1.8; margin-bottom: 20px; }
-                .list { list-style: none; padding: 0; }
-                .list li { padding: 10px 0; border-bottom: 1px solid #ecf0f1; color: #34495e; }
-                .list li:before { content: "\u2192 "; color: #3498db; font-weight: bold; }
-                .cta { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; padding: 60px 40px; border-radius: 20px; text-align: center; margin-top: 40px; }
-                .cta h2 { font-size: 2.5em; margin-bottom: 20px; }
-                .btn { display: inline-block; background: white; color: #3498db; padding: 18px 50px; border-radius: 30px; text-decoration: none; font-weight: 600; margin-top: 20px; }
-                .footer { text-align: center; padding: 40px 20px; color: #7f8c8d; }
-                .footer a { color: #3498db; text-decoration: none; margin: 0 15px; }
-            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Resource Library | The Ultimate Journey</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="The Ultimate Journey career resource library — job search strategies, interview mastery, career development guides, and salary negotiation frameworks.">
+    <meta name="robots" content="index,follow">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thispagedoesnotexist12345.info/">
+    <meta property="og:title" content="Career Resource Library | The Ultimate Journey">
+    <meta property="og:description" content="Job search strategies, interview mastery, career development guides, and salary negotiation frameworks — part of The Ultimate Journey ecosystem.">
+    <meta property="og:image" content="https://thispagedoesnotexist12345.info/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Career Resource Library | The Ultimate Journey">
+    <meta name="twitter:description" content="Job search strategies, interview mastery, career development, and salary negotiation — The Ultimate Journey resource library.">
+    <meta name="twitter:image" content="https://thispagedoesnotexist12345.info/og-image.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Career Resource Library — The Ultimate Journey",
+      "url": "https://thispagedoesnotexist12345.info/",
+      "description": "Career resource library with job search strategies, interview guides, and professional development content."
+    }
+    </script>
+
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #2c3e50; min-height: 100vh; padding: 20px; }
+      .container { max-width: 1200px; margin: 0 auto; }
+      .site-header { background: white; padding: 60px 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px; text-align: center; }
+      .site-header h1 { font-size: 3em; color: #2c3e50; margin-bottom: 15px; }
+      .tagline { font-size: 1.3em; color: #7f8c8d; margin-bottom: 30px; }
+      .badge { display: inline-block; background: #3498db; color: white; padding: 8px 20px; border-radius: 20px; margin: 5px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px; }
+      .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s; border-top: 4px solid #3498db; }
+      .card:hover { transform: translateY(-5px); }
+      .icon { font-size: 3em; margin-bottom: 20px; }
+      .card h2 { color: #2c3e50; margin-bottom: 15px; }
+      .card p { color: #7f8c8d; line-height: 1.8; margin-bottom: 20px; }
+      .list { list-style: none; padding: 0; }
+      .list li { padding: 10px 0; border-bottom: 1px solid #ecf0f1; color: #34495e; }
+      .list li:before { content: "\2192 "; color: #3498db; font-weight: bold; }
+      .cta { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; padding: 60px 40px; border-radius: 20px; text-align: center; margin-top: 40px; }
+      .cta h2 { font-size: 2.5em; margin-bottom: 20px; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; background: white; color: #3498db; padding: 18px 50px; min-height: 48px; border-radius: 30px; text-decoration: none; font-weight: 600; margin-top: 20px; }
+      .site-footer { text-align: center; padding: 40px 20px; color: #7f8c8d; }
+      .site-footer a { color: #3498db; text-decoration: none; margin: 0 15px; }
+      .site-nav { text-align: center; margin-bottom: 20px; font-size: 0.9em; }
+      .site-nav a { color: #3498db; text-decoration: none; margin: 0 12px; }
+    </style>
   </head>
   <body>
-        <div class="container">
-                  <div class="header">
-                                <h1>📚 Career Resource Library</h1>
-                              <p class="tagline">Your Gateway to Career Success &amp; Professional Growth</p>
-                              <div>
-                                                <span class="badge">Career Tips</span>
-                                                <span class="badge">Tutorials</span>
-                                                <span class="badge">Industry Insights</span>
-                              </div>
-                  </div>
-                  <div class="grid">
-                                <div class="card">
-                                                  <div class="icon">💼</div>
-                                                  <h2>Job Search Strategies</h2>
-                                                  <p>Master the art of job hunting with proven strategies</p>
-                                                <ul class="list">
-                                                                    <li>Resume optimization guides</li>
-                                                                    <li>LinkedIn profile enhancement</li>
-                                                                    <li>Networking strategies</li>
-                                                </ul>
-                                </div>
-                              <div class="card">
-                                              <div class="icon">🎯</div>
-                                              <h2>Interview Mastery</h2>
-                                              <p>Ace every interview with expert preparation</p>
-                                              <ul class="list">
-                                                                  <li>Common interview questions</li>
-                                                                  <li>STAR method framework</li>
-                                                                  <li>Technical interview guides</li>
-                                              </ul>
-                              </div>
-                              <div class="card">
-                                              <div class="icon">📈</div>
-                                              <h2>Career Development</h2>
-                                              <p>Accelerate your professional growth</p>
-                                              <ul class="list">
-                                                                  <li>Career path planning</li>
-                                                                  <li>Skill development roadmaps</li>
-                                                                  <li>Leadership development</li>
-                                              </ul>
-                              </div>
-                              <div class="card">
-                                              <div class="icon">💰</div>
-                                              <h2>Salary Negotiation</h2>
-                                              <p>Maximize your earning potential</p>
-                                              <ul class="list">
-                                                                  <li>Salary research methods</li>
-                                                                  <li>Negotiation frameworks</li>
-                                                                  <li>Benefits optimization</li>
-                                              </ul>
-                              </div>
-                  </div>
-                <div class="cta">
-                            <h2>Ready to Transform Your Career?</h2>
-                            <p>Access premium resources and tools</p>
-                            <a href="https://thispagedoesnotexist12345.com" class="btn">Explore Main Platform</a>
-                </div>
-                <div class="footer">
-                            <p>&copy; 2026 Career Resource Library</p>
-                            <div>
-                                            <a href="https://thispagedoesnotexist12345.com">Main Platform</a>
-                                            <a href="https://thispagedoesnotexist12345-me.netlify.app">Consulting</a>
-                                            <a href="https://thispagedoesnotexist12345.tech">Tech Tools</a>
-                            </div>
-                </div>
+    <header class="site-header">
+      <div class="container">
+        <h1>📚 Career Resource Library</h1>
+        <p class="tagline">Your Gateway to Career Success &amp; Professional Growth</p>
+        <div>
+          <span class="badge">Career Tips</span>
+          <span class="badge">Tutorials</span>
+          <span class="badge">Industry Insights</span>
         </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="https://www.thispagedoesnotexist12345.com/">Main Platform</a>
+      <a href="https://thispagedoesnotexist12345.me/">Consulting (.me)</a>
+      <a href="https://thispagedoesnotexist12345.tech/">Developer Tools (.tech)</a>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <div class="icon">💼</div>
+            <h2>Job Search Strategies</h2>
+            <p>Master the art of job hunting with proven strategies</p>
+            <ul class="list">
+              <li>Resume optimization guides</li>
+              <li>LinkedIn profile enhancement</li>
+              <li>Networking strategies</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">🎯</div>
+            <h2>Interview Mastery</h2>
+            <p>Ace every interview with expert preparation</p>
+            <ul class="list">
+              <li>Common interview questions</li>
+              <li>STAR method framework</li>
+              <li>Technical interview guides</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">📈</div>
+            <h2>Career Development</h2>
+            <p>Accelerate your professional growth</p>
+            <ul class="list">
+              <li>Career path planning</li>
+              <li>Skill development roadmaps</li>
+              <li>Leadership development</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="icon">💰</div>
+            <h2>Salary Negotiation</h2>
+            <p>Maximize your earning potential</p>
+            <ul class="list">
+              <li>Salary research methods</li>
+              <li>Negotiation frameworks</li>
+              <li>Benefits optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta">
+          <h2>Ready to Transform Your Career?</h2>
+          <p>Access premium resources and tools</p>
+          <a href="https://www.thispagedoesnotexist12345.com/" class="btn">Explore Main Platform</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 The Ultimate Journey — Career Resource Library</p>
+      <div>
+        <a href="https://www.thispagedoesnotexist12345.com/">Main Platform</a>
+        <a href="https://thispagedoesnotexist12345.me/">Consulting</a>
+        <a href="https://thispagedoesnotexist12345.tech/">Tech Tools</a>
+      </div>
+    </footer>
   </body>
 </html>
