@@ -1,0 +1,6 @@
+# Phase 2 stubs — hold until auth is wired
+/admin    /index.html    401
+/beta     /index.html    401
+
+# Catch-all: anything unmatched → homepage
+/*        /index.html    301
