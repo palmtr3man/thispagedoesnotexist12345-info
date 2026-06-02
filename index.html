@@ -2,6 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <script>
+      (function enforceSignalEntry() {
+        var params = new URLSearchParams(window.location.search);
+        var signalParam = params.get('signal') || params.get('source') || params.get('utm_source');
+        var cameFromSignal = /^(1|true|signal|newsletter|beehiiv)$/i.test(String(signalParam || ''));
+        if (cameFromSignal) {
+          sessionStorage.setItem('tuj:field-guide-signal-entry', '1');
+          return;
+        }
+        if (sessionStorage.getItem('tuj:field-guide-signal-entry') === '1') return;
+        window.location.replace('https://www.thispagedoesnotexist12345.com/?field_guide=signal_required');
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Field Guide | The Ultimate Journey</title>
 
