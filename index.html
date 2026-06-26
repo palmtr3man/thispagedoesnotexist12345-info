@@ -56,16 +56,16 @@
       *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
       :root {
-        --bg-deep:    #0D1B2A;
-        --bg-mid:     #1C1C2E;
-        --bg-card:    #1C1C2E;
-        --accent-teal:#00E5CC;
-        --accent-aqua:#7FFFD4;
-        --accent-gold:#FFB300;
-        --text-primary: #e8eaf6;
-        --text-muted:   #8892b0;
-        --border:       rgba(0,229,204,0.15);
-        --glow:         rgba(0,229,204,0.08);
+        --bg-deep:    #0A0A0A;
+        --bg-mid:     #0F0F0F;
+        --bg-card:    rgba(10, 10, 10, 0.6);
+        --accent-teal:#2EE6D6;
+        --accent-aqua:#00D9FF;
+        --accent-gold:#FFD740;
+        --text-primary: #ffffff;
+        --text-muted:   rgba(255, 255, 255, 0.7);
+        --border:       rgba(46, 230, 214, 0.25);
+        --glow:         rgba(46, 230, 214, 0.12);
       }
 
       html { scroll-behavior: smooth; }
@@ -88,11 +88,12 @@
         justify-content: space-between;
         padding: 20px 40px;
         border-bottom: 1px solid var(--border);
-        background: rgba(13,27,42,0.95);
+        background: rgba(10,10,10,0.95);
         position: sticky;
         top: 0;
         z-index: 100;
         backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
       }
       .nav-brand {
         font-size: 1em;
@@ -125,7 +126,7 @@
         top: -120px; left: 50%;
         transform: translateX(-50%);
         width: 600px; height: 600px;
-        background: radial-gradient(circle, rgba(0,229,204,0.06) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(46,230,214,0.06) 0%, transparent 70%);
         pointer-events: none;
       }
       .hero-eyebrow {
@@ -146,7 +147,7 @@
         margin-bottom: 24px;
         letter-spacing: -0.02em;
       }
-      .hero h1 span { color: var(--accent-teal); }
+      .hero h1 span { color: var(--accent-aqua); }
       .hero-sub {
         font-size: 1.15em;
         color: var(--text-muted);
@@ -161,17 +162,20 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: var(--accent-teal);
-        color: var(--bg-deep);
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--accent-aqua);
         padding: 15px 36px;
         border-radius: 8px;
+        border: 1px solid var(--border);
         text-decoration: none;
         font-weight: 700;
         font-size: 0.95em;
-        letter-spacing: 0.02em;
-        transition: opacity 0.2s, transform 0.2s;
+        letter-spacing: 0.05em;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
       }
-      .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+      .btn-primary:hover { border-color: rgba(0, 217, 255, 0.6); box-shadow: 0 0 12px rgba(0, 217, 255, 0.2); transform: translateY(-2px); }
       .btn-secondary {
         display: inline-flex;
         align-items: center;
@@ -190,7 +194,9 @@
 
       /* ---- Download Banner ---- */
       .download-banner {
-        background: linear-gradient(135deg, var(--bg-mid) 0%, #1a1a35 100%);
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 40px 48px;
@@ -218,8 +224,8 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        background: rgba(255,179,0,0.08);
-        border: 1px solid rgba(255,179,0,0.2);
+        background: rgba(255,215,64,0.08);
+        border: 1px solid rgba(255,215,64,0.2);
         border-radius: 10px;
         padding: 10px 18px;
         margin-top: 14px;
@@ -231,18 +237,21 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: var(--accent-gold);
-        color: #1a1200;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--accent-gold);
         padding: 15px 36px;
         border-radius: 8px;
+        border: 1px solid rgba(255, 215, 64, 0.35);
         text-decoration: none;
         font-weight: 700;
         font-size: 0.95em;
         white-space: nowrap;
-        transition: opacity 0.2s, transform 0.2s;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
         flex-shrink: 0;
       }
-      .btn-download:hover { opacity: 0.9; transform: translateY(-1px); }
+      .btn-download:hover { border-color: rgba(255, 215, 64, 0.6); box-shadow: 0 0 12px rgba(255, 215, 64, 0.2); transform: translateY(-1px); }
 
       /* ---- Section ---- */
       .section { padding: 80px 40px; }
@@ -275,6 +284,8 @@
       }
       .card {
         background: var(--bg-card);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border: 1px solid var(--border);
         border-radius: 14px;
         padding: 32px 28px;
@@ -291,7 +302,7 @@
         opacity: 0;
         transition: opacity 0.2s;
       }
-      .card:hover { border-color: rgba(0,229,204,0.35); transform: translateY(-3px); }
+      .card:hover { border-color: rgba(46,230,214,0.35); transform: translateY(-3px); }
       .card:hover::before { opacity: 1; }
       .card-icon {
         width: 44px; height: 44px;
@@ -335,7 +346,9 @@
 
       /* ---- CTA Strip ---- */
       .cta-strip {
-        background: linear-gradient(135deg, var(--bg-mid) 0%, #0f1f30 100%);
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border: 1px solid var(--border);
         border-radius: 20px;
         padding: 64px 48px;
@@ -350,7 +363,7 @@
         top: -80px; left: 50%;
         transform: translateX(-50%);
         width: 400px; height: 400px;
-        background: radial-gradient(circle, rgba(0,229,204,0.05) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(46,230,214,0.05) 0%, transparent 70%);
         pointer-events: none;
       }
       .cta-strip h2 {
@@ -488,7 +501,7 @@
             </ul>
           </div>
           <div class="card">
-            <div class="card-icon">💰</div>
+            <div class="card-icon">📈</div>
             <h3>Salary Negotiation</h3>
             <p>Maximize your earning potential with data-backed frameworks.</p>
             <ul class="card-list">
